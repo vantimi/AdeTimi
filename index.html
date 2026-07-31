@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Welcome</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- Welcome Screen -->
+
+    <section id="welcomeScreen">
+
+        <h1 id="welcomeTitle">
+            Adeola & Oluwatimileyin
+        </h1>
+
+
+        <p id="welcomeSubtitle">
+           Welcome to our wedding,  We are so happy you are here ❤️
+        </p>
+
+
+        <div class="input-box">
+
+            <input 
+            id="guestName"
+            type="text"
+            placeholder="Enter your name"
+            >
+
+
+            <button onclick="welcomeGuest()">
+                Continue
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- Guest Message -->
+
+    <section id="guestScreen" class="hidden">
+
+
+        <h1>
+            Welcome,
+            <span id="displayName"></span>
+            ❤️
+        </h1>
+
+
+        <div class="card message-card">
+
+            <p id="personalMessage"></p>
+
+        </div>
+
+
+
+
+        <!-- House Rules -->
+
+        <div class="card">
+
+            <h2>
+                🏡 House Rules
+            </h2>
+
+
+            <ul id="rulesList"></ul>
+
+        </div>
+
+
+
+
+        <!-- WiFi -->
+
+        <div class="card">
+
+            <h2>
+                📶 Wi-Fi
+            </h2>
+
+
+            <p id="wifiDetails"></p>
+
+
+        </div>
+
+        <div class="info-card">
+
+    <h3>🆘 Need Assistance?</h3>
+
+    <p>
+        If you need any help during the celebration,
+        please contact Stanley 017684647717.
+    </p>
+
+    <br>
+<p>
+        or emergency on 112.
+    </p>
+    <strong id="contactName"></strong>
+
+    <br><br>
+</div>
+
+
+
+
+        <!-- Action Buttons -->
+
+        <div 
+        id="actionsContainer"
+        class="actions">
+        </div>
+
+
+
+
+        <p class="footer">
+
+            Thank you for celebrating with us. We hope you enjoy your time with us ❤️
+
+        </p>
+
+
+
+    </section>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

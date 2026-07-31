@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: "Georgia", serif;
+
+    background:
+    linear-gradient(
+        rgba(248,244,236,0.85),
+        rgba(248,244,236,0.85)
+    ),
+    url("assets/background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+}
+
+
+
+section {
+
+    text-align: center;
+
+}
+
+
+
+
+h1 {
+
+    font-size: 42px;
+
+    color: #0B1F3A;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+h2 {
+
+    color: #0B1F3A;
+
+    font-size: 24px;
+
+}
+
+
+
+
+p {
+
+    color: #0B1F3A;
+
+    line-height: 1.6;
+
+    font-size: 18px;
+
+}
+
+
+
+
+
+.input-box {
+
+    margin-top: 40px;
+
+}
+
+
+
+
+input {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #D4AF7A;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+    color: #0B1F3A;
+}
+
+input:focus {
+    outline: none;
+    border-color: #C29A5C;
+    box-shadow: 0 0 8px rgba(212, 175, 122, 0.4);
+}
+
+
+
+
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 12px;
+    border: none;
+    background: #D4AF7A;
+    color: #0B1F3A;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #C29A5C;
+}
+
+
+
+
+
+.card {
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 1px solid #D4AF7A;
+    box-shadow: 0 10px 30px rgba(11,31,58,0.15);
+}
+
+
+
+
+
+.message-card {
+
+    border-left: 6px solid #D4AF7A;
+
+}
+
+
+
+
+
+ul {
+
+    padding-left: 20px;
+
+    text-align: left;
+
+}
+
+
+
+li {
+
+    margin-bottom: 12px;
+
+    color: #5b4636;
+
+    font-size: 17px;
+
+}
+
+
+
+
+.actions {
+
+    margin-top: 25px;
+
+}
+
+
+
+
+.action-button {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: #0B1F3A;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+}
+
+
+
+
+
+.footer {
+
+    margin-top: 35px;
+
+    font-style: italic;
+
+    color: #0B1F3A;
+
+}
+
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+
+
+@media(max-width:600px){
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+}
