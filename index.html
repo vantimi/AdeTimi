@@ -3,153 +3,366 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Wedding Welcome</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <title>
+        Adeola & Oluwatimileyin Wedding
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
 
 <body>
 
-<div class="container">
+    <div class="container">
 
 
-    <!-- Welcome Screen -->
+        <!-- =========================
+             WELCOME SCREEN
+        ========================== -->
 
-    <section id="welcomeScreen">
+        <section id="welcomeScreen">
 
-        <h1 id="welcomeTitle">
-            Adeola & Oluwatimileyin
-        </h1>
+            <h1 id="welcomeTitle">
+                Adeola & Oluwatimileyin
+            </h1>
+
+            <p id="welcomeSubtitle">
+                We are delighted you are here ❤️
+            </p>
 
 
-        <p id="welcomeSubtitle">
-           Welcome to our wedding,  We are so happy you are here ❤️
-        </p>
+            <div class="input-box">
+
+                <input
+                    id="guestName"
+                    type="text"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                >
+
+                <button
+                    id="continueButton"
+                    type="button"
+                    onclick="welcomeGuest()"
+                >
+                    Continue
+                </button>
+
+            </div>
 
 
-        <div class="input-box">
+            <p
+                id="welcomeError"
+                class="error-message hidden"
+            ></p>
 
-            <input 
-            id="guestName"
-            type="text"
-            placeholder="Enter your name"
+        </section>
+
+
+
+        <!-- =========================
+             GUEST SCREEN
+        ========================== -->
+
+        <section
+            id="guestScreen"
+            class="hidden"
+        >
+
+
+            <!-- Guest Heading -->
+
+            <h1 class="guest-heading">
+
+                Welcome,
+                <span id="displayName"></span>
+                ❤️
+
+            </h1>
+
+
+
+            <!-- Personal Message -->
+
+            <div class="card message-card">
+
+                <p id="personalMessage"></p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 LIVE COUNTDOWN
+            ========================== -->
+
+            <div
+                id="countdownCard"
+                class="card countdown-card"
             >
 
-
-            <button onclick="welcomeGuest()">
-                Continue
-            </button>
-
-        </div>
-
-
-    </section>
+                <p
+                    id="countdownStatus"
+                    class="countdown-status"
+                >
+                    ⏳ Wedding begins in
+                </p>
 
 
+                <h2
+                    id="countdownHeading"
+                    class="countdown-heading"
+                >
+                    Adeola & Oluwatimileyin
+                </h2>
 
 
-    <!-- Guest Message -->
+                <div
+                    id="countdownTimer"
+                    class="countdown-timer"
+                >
 
-    <section id="guestScreen" class="hidden">
+                    <div class="countdown-unit">
 
+                        <span id="countdownDays">
+                            00
+                        </span>
 
-        <h1>
-            Welcome,
-            <span id="displayName"></span>
-            ❤️
-        </h1>
+                        <small>
+                            Days
+                        </small>
 
-
-        <div class="card message-card">
-
-            <p id="personalMessage"></p>
-
-        </div>
-
+                    </div>
 
 
+                    <div class="countdown-unit">
 
-        <!-- House Rules -->
+                        <span id="countdownHours">
+                            00
+                        </span>
 
-        <div class="card">
+                        <small>
+                            Hours
+                        </small>
 
-            <h2>
-                🏡 House Rules
-            </h2>
-
-
-            <ul id="rulesList"></ul>
-
-        </div>
+                    </div>
 
 
+                    <div class="countdown-unit">
+
+                        <span id="countdownMinutes">
+                            00
+                        </span>
+
+                        <small>
+                            Minutes
+                        </small>
+
+                    </div>
 
 
-        <!-- WiFi -->
+                    <div class="countdown-unit">
 
-        <div class="card">
+                        <span id="countdownSeconds">
+                            00
+                        </span>
 
-            <h2>
-                📶 Wi-Fi
-            </h2>
+                        <small>
+                            Seconds
+                        </small>
 
+                    </div>
 
-            <p id="wifiDetails"></p>
-
-
-        </div>
-
-        <div class="info-card">
-
-    <h3>🆘 Need Assistance?</h3>
-
-    <p>
-        If you need any help during the celebration,
-        please contact Stanley 017684647717.
-    </p>
-
-    <br>
-<p>
-        or emergency on 112.
-    </p>
-    <strong id="contactName"></strong>
-
-    <br><br>
-</div>
+                </div>
 
 
+                <div
+                    id="liveEventDetails"
+                    class="live-event-details hidden"
+                >
+
+                    <div class="live-event-block">
+
+                        <span class="live-label">
+                            Happening now
+                        </span>
+
+                        <h3 id="currentEventTitle"></h3>
+
+                    </div>
 
 
-        <!-- Action Buttons -->
+                    <div
+                        id="nextEventBlock"
+                        class="live-event-block next-event-block"
+                    >
 
-        <div 
-        id="actionsContainer"
-        class="actions">
-        </div>
+                        <span class="next-label">
+                            Next
+                        </span>
 
+                        <p id="nextEventTitle"></p>
 
+                    </div>
 
-
-        <p class="footer">
-
-            Thank you for celebrating with us. We hope you enjoy your time with us ❤️
-
-        </p>
-
+                </div>
 
 
-    </section>
+                <p
+                    id="countdownNote"
+                    class="countdown-note"
+                ></p>
+
+            </div>
 
 
-</div>
+
+            <!-- =========================
+                 ORDER OF PROGRAM
+            ========================== -->
+
+            <div
+                id="programCard"
+                class="card program-card"
+            >
+
+                <h2>
+                    📅 Order of Program
+                </h2>
+
+                <div
+                    id="programList"
+                    class="program-list"
+                ></div>
+
+            </div>
 
 
-<script src="app.js"></script>
+
+            <!-- =========================
+                 HOUSE RULES
+            ========================== -->
+
+            <div class="card">
+
+                <h2>
+                    🏡 House Rules
+                </h2>
+
+                <ul id="rulesList"></ul>
+
+            </div>
+
+
+
+            <!-- =========================
+                 WI-FI
+            ========================== -->
+
+            <div class="card">
+
+                <h2>
+                    📶 Wi-Fi
+                </h2>
+
+                <p id="wifiDetails"></p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ASSISTANCE
+            ========================== -->
+
+            <div class="info-card">
+
+                <h3>
+                    🆘 Need Assistance?
+                </h3>
+
+                <p>
+                    If you need help during the celebration,
+                    please contact:
+                </p>
+
+                <p>
+
+                    <strong id="contactName">
+                        Stanley
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    <a
+                        id="contactNumber"
+                        class="contact-link"
+                        href="tel:+4917684647717"
+                    >
+                        +49 176 84647717
+                    </a>
+
+                </p>
+
+                <p>
+                    For emergencies, call:
+                </p>
+
+                <p>
+
+                    <a
+                        id="emergencyNumber"
+                        class="contact-link emergency-link"
+                        href="tel:112"
+                    >
+                        112
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ACTION BUTTONS
+            ========================== -->
+
+            <div
+                id="actionsContainer"
+                class="actions"
+            ></div>
+
+
+
+            <p class="footer">
+
+                Thank you for celebrating with us.
+                We hope you enjoy your time with us ❤️
+
+            </p>
+
+
+        </section>
+
+
+    </div>
+
+
+    <script src="app.js"></script>
 
 
 </body>
