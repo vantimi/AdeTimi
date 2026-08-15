@@ -825,3 +825,351 @@ li:last-child {
     }
 
 }
+
+/* =========================
+   WEDDING HYMN
+========================= */
+
+.hymn-card {
+    text-align: center;
+}
+
+
+.hymn-details {
+    width: 100%;
+
+    border: 1px solid rgba(212, 175, 122, 0.7);
+    border-radius: 14px;
+
+    background: #FFFDF9;
+
+    overflow: hidden;
+}
+
+
+.hymn-details summary {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    text-align: left;
+}
+
+
+.hymn-details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.hymn-details summary::after {
+    content: "＋";
+
+    margin-left: auto;
+
+    color: #D4AF7A;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.hymn-details[open] summary::after {
+    content: "−";
+}
+
+
+.hymn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 122, 0.16);
+
+    font-size: 20px;
+}
+
+
+.hymn-summary-text {
+    display: flex;
+    flex-direction: column;
+
+    color: #0B1F3A;
+}
+
+
+.hymn-summary-text strong {
+    font-size: 18px;
+}
+
+
+.hymn-summary-text small {
+    margin-top: 4px;
+
+    color: #7A6A59;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   HYMN LYRICS
+========================= */
+
+.hymn-lyrics {
+    padding: 5px 22px 24px;
+
+    border-top: 1px solid rgba(212, 175, 122, 0.4);
+
+    text-align: left;
+}
+
+
+.hymn-lyrics h3 {
+    margin-top: 22px;
+
+    text-align: center;
+}
+
+
+.hymn-verse {
+    margin-top: 28px;
+}
+
+
+.hymn-verse:first-of-type {
+    margin-top: 20px;
+}
+
+
+.verse-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #B88A49;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.hymn-verse p {
+    margin: 0;
+
+    color: #5B4636;
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* Refrain gets a special highlighted box */
+
+.hymn-refrain {
+    padding: 18px;
+
+    border-left: 4px solid #D4AF7A;
+    border-radius: 8px;
+
+    background: rgba(212, 175, 122, 0.09);
+}
+
+
+.refrain-note {
+    margin-top: 10px !important;
+
+    color: #8A6735 !important;
+
+    font-size: 14px !important;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HYMN MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hymn-details summary {
+        padding: 15px;
+    }
+
+
+    .hymn-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 18px;
+    }
+
+
+    .hymn-summary-text strong {
+        font-size: 17px;
+    }
+
+
+    .hymn-lyrics {
+        padding: 5px 17px 22px;
+    }
+
+
+    .hymn-verse p {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+
+
+    .hymn-refrain {
+        padding: 15px;
+    }
+
+}
+
+/* =========================
+   PROGRAM DROPDOWN
+========================= */
+
+.program-details {
+    width: 100%;
+
+    border: 1px solid rgba(212, 175, 122, 0.7);
+    border-radius: 14px;
+
+    background: #FFFDF9;
+
+    overflow: hidden;
+}
+
+
+.program-details summary {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    text-align: left;
+}
+
+
+.program-details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.program-details summary::after {
+    content: "＋";
+
+    margin-left: auto;
+
+    color: #D4AF7A;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.program-details[open] summary::after {
+    content: "−";
+}
+
+
+.program-summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 122, 0.16);
+
+    font-size: 20px;
+}
+
+
+.program-summary-text {
+    display: flex;
+    flex-direction: column;
+
+    color: #0B1F3A;
+}
+
+
+.program-summary-text strong {
+    font-size: 18px;
+}
+
+
+.program-summary-text small {
+    margin-top: 4px;
+
+    color: #7A6A59;
+
+    font-size: 13px;
+}
+
+
+.program-dropdown-content {
+    padding: 22px 18px;
+
+    border-top: 1px solid
+        rgba(212, 175, 122, 0.4);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .program-details summary {
+        padding: 15px;
+    }
+
+
+    .program-summary-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 18px;
+    }
+
+
+    .program-summary-text strong {
+        font-size: 17px;
+    }
+
+
+    .program-dropdown-content {
+        padding: 20px 12px;
+    }
+
+}
